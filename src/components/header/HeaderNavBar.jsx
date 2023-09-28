@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
 
 import styled from "@emotion/styled";
+import { handleDropdownAnimation } from "../../js/utilities";
 
-function HeaderNavBar({ setToggleDropDown, setCurrentNavSelection, setBlur }) {
+
+function HeaderNavBar({
+  setDropDownAnimation,
+  setToggleDropDown,
+  setCurrentNavSelection,
+  setBlur,
+}) {
   const NavContainer = styled.nav`
     /* margin: 0 50px; */
     /* padding: 9px 0 0; */
@@ -36,7 +43,7 @@ function HeaderNavBar({ setToggleDropDown, setCurrentNavSelection, setBlur }) {
 
     font-weight: 600;
   `;
-  const Link = styled.a`
+  const StyledLink = styled(Link)`
     padding: 0 11px;
     cursor: pointer;
   `;
@@ -52,6 +59,9 @@ function HeaderNavBar({ setToggleDropDown, setCurrentNavSelection, setBlur }) {
 
   const handleDropDown = (selected) => {
     setToggleDropDown(true);
+    setTimeout(() => {
+      handleDropdownAnimation(true);
+    }, 100);
     setBlur(true);
     setCurrentNavSelection(selected);
   };
@@ -60,51 +70,54 @@ function HeaderNavBar({ setToggleDropDown, setCurrentNavSelection, setBlur }) {
     <NavContainer>
       <BreakDropDropDown
         onMouseEnter={() => {
-          setToggleDropDown(false);
-          setBlur(false);
+          handleDropdownAnimation(false);
+          setTimeout(() => {
+            setToggleDropDown(false);
+            setBlur(false);
+          }, 2000);
         }}
       />
       <NavList>
         <NavLi onMouseEnter={() => handleDropDown(0)}>
-          <Link>New arrivals</Link>
+          <StyledLink to={"/NewArrivals"}>New arrivals</StyledLink>
         </NavLi>
         <NavBarSeparator />
         <NavLi onMouseEnter={() => handleDropDown(1)}>
-          <Link>Ready to wear</Link>
+          <StyledLink>Ready to wear</StyledLink>
         </NavLi>
         <NavBarSeparator />
         {/* <NavLi onMouseEnter={() => handleDropDown(2)}> */}
         <NavLi onMouseEnter={() => handleDropDown(-1)}>
-          {/* <Link>Swim & resort</Link> */}
-          <Link>Section</Link>
+          {/* <StyledLink>Swim & resort</StyledLink> */}
+          <StyledLink>Section</StyledLink>
         </NavLi>
         <NavBarSeparator />
         {/* <NavLi onMouseEnter={() => handleDropDown(3)}> */}
         <NavLi onMouseEnter={() => handleDropDown(-1)}>
-          {/* <Link>Accesories</Link> */}
-          <Link>Section</Link>
+          {/* <StyledLink>Accesories</StyledLink> */}
+          <StyledLink>Section</StyledLink>
         </NavLi>
         <NavBarSeparator />
         {/* <NavLi onMouseEnter={() => handleDropDown(4)}> */}
         <NavLi onMouseEnter={() => handleDropDown(-1)}>
-          {/* <Link>Jewellery</Link> */}
-          <Link>Section</Link>
+          {/* <StyledLink>Jewellery</StyledLink> */}
+          <StyledLink>Section</StyledLink>
         </NavLi>
         <NavBarSeparator />
         {/* <NavLi onMouseEnter={() => handleDropDown(5)}> */}
         <NavLi onMouseEnter={() => handleDropDown(-1)}>
-          {/* <Link>Shoes</Link> */}
-          <Link>Section</Link>
+          {/* <StyledLink>Shoes</StyledLink> */}
+          <StyledLink>Section</StyledLink>
         </NavLi>
         <NavBarSeparator />
         {/* <NavLi onMouseEnter={() => handleDropDown(6)}> */}
         <NavLi onMouseEnter={() => handleDropDown(-1)}>
-          {/* <Link>Kids</Link> */}
-          <Link>Empty</Link>
+          {/* <StyledLink>Kids</StyledLink> */}
+          <StyledLink>Empty</StyledLink>
         </NavLi>
         <NavBarSeparator />
         <NavLi onMouseEnter={() => handleDropDown(7)}>
-          <Link>Collections</Link>
+          <StyledLink>Collections</StyledLink>
         </NavLi>
       </NavList>
     </NavContainer>

@@ -5,7 +5,7 @@ import styled from "@emotion/styled";
 
 const FooterContainer = styled.footer`
   width: 100%;
-  padding: 0 25px;
+  /* padding: 0 25px; */
   background-color: var(--light-background);
 `;
 
@@ -51,29 +51,29 @@ const ListLink = styled(Link)`
 
 const Footer = () => {
   return (
-    <FooterContainer>
+    <FooterContainer id="footer">
       <Container>
         <SmallBock>
           <Title>Shop</Title>
           <List>
             <ListItem>
-              <ListLink>New arrivals</ListLink>
+              <ListLink to={"/NewArrivals"}>New arrivals</ListLink>
             </ListItem>
-            <ListItem>
+            {/* <ListItem>
               <ListLink>The edit</ListLink>
-            </ListItem>
+            </ListItem> */}
             <ListItem>
               <ListLink>Ready to wear</ListLink>
             </ListItem>
-            <ListItem>
+            {/* <ListItem>
               <ListLink>Swim & resort</ListLink>
-            </ListItem>
-            <ListItem>
+            </ListItem> */}
+            {/* <ListItem>
               <ListLink>Accesories</ListLink>
-            </ListItem>
-            <ListItem>
+            </ListItem> */}
+            {/* <ListItem>
               <ListLink>Stores</ListLink>
-            </ListItem>
+            </ListItem> */}
           </List>
         </SmallBock>
 
@@ -98,9 +98,9 @@ const Footer = () => {
             <ListItem>
               <ListLink>Size guide</ListLink>
             </ListItem>
-            <ListItem>
+            {/* <ListItem>
               <ListLink>Brand protection</ListLink>
-            </ListItem>
+            </ListItem> */}
           </List>
         </SmallBock>
 

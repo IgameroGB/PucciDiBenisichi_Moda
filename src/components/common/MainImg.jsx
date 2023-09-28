@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 
 const HeroContainer = styled.section`
   position: relative;
+  padding: 0;
 `;
 
 const Image = styled.img`
@@ -51,7 +52,7 @@ const GoDownBox = styled.div`
 
 function MainImg({ imgUrl }) {
   return (
-    <HeroContainer>
+    <HeroContainer className="container">
       <Image src={imgUrl} alt="Banner principal" />
       <a href="#section-slider">
         <GoDownItemContainer>

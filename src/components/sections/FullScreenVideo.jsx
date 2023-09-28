@@ -1,19 +1,20 @@
 import styled from "@emotion/styled";
 import React from "react";
-const VideoSection = styled.section`
-  margin-bottom: 60px;
-`;
 
-function FullScreenVideo({ videoUrl }) {
+function FullScreenVideo({ videoUrl, title, width }) {
+  const VideoSection = styled.section`
+    /* margin: auto; */
+    padding: 0;
+    ${width && `width: ${width};`};
+  `;
   return (
-    <VideoSection>
+    <VideoSection className="container">
       <div className="iframe-container">
         <iframe
           src={videoUrl}
-          title="YouTube video player"
-          frameborder="0"
+          title={title}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       </div>
     </VideoSection>

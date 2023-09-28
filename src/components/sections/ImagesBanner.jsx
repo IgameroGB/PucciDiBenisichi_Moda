@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 
 const Section = styled.section`
-  width: 100%;
+  /* width: 100%; */
+  padding: 0;
   margin-bottom: 60px;
 `;
 
@@ -18,19 +19,24 @@ const StyledLink = styled(Link)`
   width: 32.8vw;
 `;
 
+const VerticalSeparator = styled.div`
+  min-width: 3px;
+  height: 100%;
+`;
+
 const Image = styled.img`
   width: 100%;
 `;
 
 const ImageText = styled.span`
-margin: 14px 0 7px;
-padding: 0 15px;
-font-size: 10px;
-`
+  margin: 14px 0 7px;
+  padding: 0 15px;
+  font-size: 10px;
+`;
 
 function ImagesBanner() {
   return (
-    <Section>
+    <Section className="container">
       <ImagesContainer>
         <StyledLink>
           <Image
@@ -40,6 +46,8 @@ function ImagesBanner() {
           <ImageText>Shop New Arrivals</ImageText>
         </StyledLink>
 
+        <VerticalSeparator />
+
         <StyledLink>
           <Image
             src="https://www.zimmermann.com/media/wysiwyg/ZIM_barcelona-art_3.jpg"
@@ -47,6 +55,8 @@ function ImagesBanner() {
           />
           <ImageText>Shop In store</ImageText>
         </StyledLink>
+
+        <VerticalSeparator />
 
         <StyledLink>
           <Image

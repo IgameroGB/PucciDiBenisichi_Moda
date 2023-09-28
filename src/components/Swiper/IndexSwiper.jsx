@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -16,6 +16,7 @@ import IndexSlide from "./IndexSlide";
 
 const Section = styled.section`
   margin-bottom: 50px;
+  padding: 0 10%;
 `;
 
 const SectionHead = styled.div`
@@ -42,7 +43,7 @@ const Separator = styled.div`
   width: 0;
 `;
 
-const SwiperContainer = styled.div`
+const SwiperElem = styled.div`
   margin: auto;
   width: 100%;
   /* height: 500px; */
@@ -69,8 +70,56 @@ const IndexSwiper = () => {
       swiper.slideTo(0);
     }
   };
+
+  const breakpoints = {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 200,
+    },
+
+    500: {
+      slidesPerView: 2,
+      spaceBetween: 200,
+    },
+
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 200,
+    },
+
+    900: {
+      slidesPerView: 4,
+      spaceBetween: 200,
+    },
+    1200: {
+      slidesPerView: 5,
+      spaceBetween: 200,
+    },
+    1450: {
+      slidesPerView: 6,
+      spaceBetween: 200,
+    },
+  };
+
+  // const handleResize = (swiper) => {
+  //   console.log("La página se ha redimensionado.");
+  //   if (window.innerWidth > 1440) {
+  //     swiper.params.slidesPerView = 6;
+  //   } else if (window.innerWidth > 1024 && window.innerWidth < 1440) {
+  //     swiper.params.slidesPerView = 5;
+  //   } else if (window.innerWidth > 800 && window.innerWidth < 1024) {
+  //     swiper.params.slidesPerView = 4;
+  //   } else if (window.innerWidth > 650 && window.innerWidth < 800) {
+  //     swiper.params.slidesPerView = 3;
+  //   } else if (window.innerWidth > 500 && window.innerWidth < 650) {
+  //     swiper.params.slidesPerView = 2;
+  //   } else {
+  //     swiper.params.slidesPerView = 1;
+  //   }
+  // };
+
   return (
-    <Section id="section-slider">
+    <Section id="section-slider" className="container">
       <SectionHead>
         <Link>
           <LinkContent>Shop fall RTW 2023</LinkContent>
@@ -81,17 +130,19 @@ const IndexSwiper = () => {
         </Link>
       </SectionHead>
 
-      <SwiperContainer>
+      <SwiperElem>
         <StyledSwiper
           // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y]}
+          breakpoints={breakpoints}
           spaceBetween={50}
-          slidesPerView={5}
+          // slidesPerView={5}
           navigation
           // pagination={{ clickable: true }}
           // scrollbar={{ draggable: true }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={(swiper) => handleSlideChange(swiper)}
+          // onResize={(swiper) => handleResize(swiper)}
         >
           <SwiperSlide>
             <IndexSlide
@@ -158,7 +209,7 @@ const IndexSwiper = () => {
 
           <SwiperSlide>{/* Empty. Lenght control */}</SwiperSlide>
         </StyledSwiper>
-      </SwiperContainer>
+      </SwiperElem>
       <SectionFooter>
         <span>Shop the colection</span>
       </SectionFooter>

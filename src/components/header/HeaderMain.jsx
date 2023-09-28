@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import styled from "@emotion/styled";
+import { handleDropdownAnimation } from "../../js/utilities";
 
 import HeaderContact from "./HeaderContact";
 import HeaderLogo from "./HeaderLogo";
@@ -10,6 +11,7 @@ import HeaderDropdown from "./HeaderDropdown";
 
 function HeaderMain({ setBlur }) {
   const [toggleDropDown, setToggleDropDown] = useState(false);
+  const [dropDownAnimation, setDropDownAnimation] = useState(false);
   const [currentNavSelection, setCurrentNavSelection] = useState(0);
   const [backHeight, setBackHeight] = useState(0);
 
@@ -25,6 +27,7 @@ function HeaderMain({ setBlur }) {
     justify-content: space-between;
     align-items: center;
     padding: 0 25px;
+    height: 56px;
   `;
 
   const HeaderBottom = styled.div``;
@@ -50,8 +53,11 @@ function HeaderMain({ setBlur }) {
         event.clientX >= window.innerWidth ||
         event.clientY >= window.innerHeight
       ) {
-        setToggleDropDown(false);
-        setBlur(false);
+        handleDropdownAnimation(false);
+        setTimeout(() => {
+          setToggleDropDown(false);
+          setBlur(false);
+        }, 2000);
       }
     });
   }, []);
@@ -69,6 +75,7 @@ function HeaderMain({ setBlur }) {
         </HeaderTop>
         <HeaderBottom>
           <HeaderNavBar
+            setDropDownAnimation={setDropDownAnimation}
             setToggleDropDown={setToggleDropDown}
             setCurrentNavSelection={setCurrentNavSelection}
             setBlur={setBlur}
@@ -77,6 +84,7 @@ function HeaderMain({ setBlur }) {
         </HeaderBottom>
         {toggleDropDown && (
           <HeaderDropdown
+            dropDownAnimation={dropDownAnimation}
             setToggleDropDown={setToggleDropDown}
             currentNavSelection={currentNavSelection}
             setBlur={setBlur}

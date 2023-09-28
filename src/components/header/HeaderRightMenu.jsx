@@ -1,34 +1,52 @@
+import { Link } from "react-router-dom";
+
 import styled from "@emotion/styled";
-import "font-awesome/css/font-awesome.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 function HeaderRightMenu() {
   const RightMenuContainer = styled.div`
     width: 33%;
     display: flex;
     justify-content: flex-end;
+    height: 100%;
   `;
 
   const MarginIco = styled.div`
     margin-left: 25px;
   `;
 
+  const StyledLink = styled(Link)`
+    height: 100%;
+    display: flex;
+    align-items: center;
+  `;
+
   const Ico = styled.i`
     cursor: pointer;
   `;
+
   return (
     <RightMenuContainer>
-      <MarginIco>
-        <Ico className="fa-regular fa-user"></Ico>
-      </MarginIco>
-      <MarginIco>
-        <Ico className="fa-regular fa-star"></Ico>
-      </MarginIco>
-      <MarginIco>
-        <Ico className="fa-solid fa-bag-shopping"></Ico>
-      </MarginIco>
-      <MarginIco>
-        <Ico className="fa-solid fa-magnifying-glass"></Ico>
-      </MarginIco>
+      <StyledLink  className="link" to={"/404"}>
+        <MarginIco>
+          <Ico className="bi bi-person-circle"></Ico>
+        </MarginIco>
+      </StyledLink>
+      <StyledLink  className="link" to={"/404"}>
+        <MarginIco>
+          <Ico className="bi bi-star"></Ico>
+        </MarginIco>
+      </StyledLink>
+      <StyledLink  className="link" to={"/404"}>
+        <MarginIco>
+          <Ico className="bi bi-bag"></Ico>
+        </MarginIco>
+      </StyledLink>
+      <StyledLink  className="link" to={"/404"}>
+        <MarginIco>
+          <Ico className="bi bi-search"></Ico>
+        </MarginIco>
+      </StyledLink>
     </RightMenuContainer>
   );
 }

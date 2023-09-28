@@ -11,8 +11,9 @@ function BackBlur() {
     /* background-color: #ffffff66; */
     /* filter: blur(10px); */
     backdrop-filter: blur(20px);
+    transition: 500ms ease;
   `;
-  return <BlurElem>BackBlur</BlurElem>;
+  return <BlurElem id="blur-elem">BackBlur</BlurElem>;
 }
 
 export default BackBlur;
