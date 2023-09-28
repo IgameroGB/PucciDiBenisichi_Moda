@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-function Content0() {
+function Content2() {
   const Content = styled.div`
     display: flex;
     /* background-color: red; */
@@ -143,4 +143,4 @@ function Content0() {
   );
 }
 
-export default Content0;
+export default Content2;

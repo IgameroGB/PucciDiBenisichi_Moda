@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-function Content0() {
+function Content1() {
   const Content = styled.div`
     display: flex;
     /* background-color: red; */
@@ -70,25 +70,25 @@ function Content0() {
           <ListItem>
             <a href="#">Shorts & pants</a>
           </ListItem>
-          <ListItem>
+          {/* <ListItem>
             <a href="#">Denim</a>
-          </ListItem>
+          </ListItem> */}
           <ListItem>
             <a href="#">Skirts</a>
           </ListItem>
-          <ListItem>
+          {/* <ListItem>
             <a href="#">Knitwear</a>
-          </ListItem>
+          </ListItem> */}
           <ListItem>
             <a href="#">Jackets & coats</a>
           </ListItem>
-          <ListItem>
+          {/* <ListItem>
             <a href="#">Jumpsuits & playsuits</a>
-          </ListItem>
+          </ListItem> */}
         </List>
       </SmallBlock>
       <SmallBlock>
-        <BlockTitle>Accesories</BlockTitle>
+        {/* <BlockTitle>Accesories</BlockTitle>
         <List>
           <ListItem>
             <a href="#">Accesories</a>
@@ -99,24 +99,28 @@ function Content0() {
           <ListItem>
             <a href="#">Sunglases</a>
           </ListItem>
-        </List>
-        <BlockTitle>Edits</BlockTitle>
+        </List> */}
+        {/* <BlockTitle>Edits</BlockTitle> */}
+        <BlockTitle>Empty</BlockTitle>
         <List>
           <ListItem>
+            <a href="#">Empty list item</a>
+          </ListItem>
+          {/* <ListItem>
             <a href="#">Luminosity</a>
-          </ListItem>
-          <ListItem>
+          </ListItem> */}
+          {/* <ListItem>
             <a href="#">Form & light</a>
-          </ListItem>
-          <ListItem>
+          </ListItem> */}
+          {/* <ListItem>
             <a href="#">In bloom</a>
-          </ListItem>
-          <ListItem>
+          </ListItem> */}
+          {/* <ListItem>
             <a href="#">Fall frames</a>
-          </ListItem>
-          <ListItem>
+          </ListItem> */}
+          {/* <ListItem>
             <a href="#">In denim</a>
-          </ListItem>
+          </ListItem> */}
         </List>
       </SmallBlock>
       <MediumBlock>
@@ -139,4 +143,4 @@ function Content0() {
   );
 }
 
-export default Content0;
+export default Content1;

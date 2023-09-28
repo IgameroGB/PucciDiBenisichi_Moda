@@ -6,8 +6,9 @@ import Content2 from "./dropdown/Content2";
 import Content3 from "./dropdown/Content3";
 import Content4 from "./dropdown/Content4";
 import Content5 from "./dropdown/Content5";
-// import Content6 from "./dropdown/Content6";
+import Content6 from "./dropdown/Content6";
 import Content7 from "./dropdown/Content7";
+import ContentEmpty from "./dropdown/ContentEmpty";
 
 function HeaderDropdown({ setToggleDropDown, currentNavSelection, setBlur }) {
   const HeaderDropdownContainer = styled.div`
@@ -45,8 +46,9 @@ function HeaderDropdown({ setToggleDropDown, currentNavSelection, setBlur }) {
         {currentNavSelection == 3 && <Content3 />} {/* Accesories */}
         {currentNavSelection == 4 && <Content4 />} {/* jewellery */}
         {currentNavSelection == 5 && <Content5 />} {/* Shoes */}
-        {/* {currentNavSelection == 6 && <Content6 />} Kids */}
+        {currentNavSelection == 6 && <Content6 />} {/* Kids */}
         {currentNavSelection == 7 && <Content7 />} {/* Collections */}
+        {currentNavSelection == -1 && <ContentEmpty />} {/* Empty */}
       </Container>
       <BreakDropDropDown
         onMouseEnter={() => {

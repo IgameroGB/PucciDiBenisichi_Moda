@@ -73,25 +73,35 @@ function HeaderNavBar({ setToggleDropDown, setCurrentNavSelection, setBlur }) {
           <Link>Ready to wear</Link>
         </NavLi>
         <NavBarSeparator />
-        <NavLi onMouseEnter={() => handleDropDown(2)}>
-          <Link>Swim & resort</Link>
+        {/* <NavLi onMouseEnter={() => handleDropDown(2)}> */}
+        <NavLi onMouseEnter={() => handleDropDown(-1)}>
+          {/* <Link>Swim & resort</Link> */}
+          <Link>Section</Link>
         </NavLi>
         <NavBarSeparator />
-        <NavLi onMouseEnter={() => handleDropDown(3)}>
-          <Link>Accesories</Link>
+        {/* <NavLi onMouseEnter={() => handleDropDown(3)}> */}
+        <NavLi onMouseEnter={() => handleDropDown(-1)}>
+          {/* <Link>Accesories</Link> */}
+          <Link>Section</Link>
         </NavLi>
         <NavBarSeparator />
-        <NavLi onMouseEnter={() => handleDropDown(4)}>
-          <Link>Jewellery</Link>
+        {/* <NavLi onMouseEnter={() => handleDropDown(4)}> */}
+        <NavLi onMouseEnter={() => handleDropDown(-1)}>
+          {/* <Link>Jewellery</Link> */}
+          <Link>Section</Link>
         </NavLi>
         <NavBarSeparator />
-        <NavLi onMouseEnter={() => handleDropDown(5)}>
-          <Link>Shoes</Link>
+        {/* <NavLi onMouseEnter={() => handleDropDown(5)}> */}
+        <NavLi onMouseEnter={() => handleDropDown(-1)}>
+          {/* <Link>Shoes</Link> */}
+          <Link>Section</Link>
         </NavLi>
         <NavBarSeparator />
-        {/* <NavLi onMouseEnter={() => handleDropDown(6)}>
-          <Link>Kids</Link>
-        </NavLi> */}
+        {/* <NavLi onMouseEnter={() => handleDropDown(6)}> */}
+        <NavLi onMouseEnter={() => handleDropDown(-1)}>
+          {/* <Link>Kids</Link> */}
+          <Link>Empty</Link>
+        </NavLi>
         <NavBarSeparator />
         <NavLi onMouseEnter={() => handleDropDown(7)}>
           <Link>Collections</Link>

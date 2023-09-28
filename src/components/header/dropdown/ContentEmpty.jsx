@@ -56,51 +56,18 @@ function Content0() {
   return (
     <Content>
       <SmallBlock>
-        <BlockTitle>New Arrivals</BlockTitle>
+        <BlockTitle>Empty title</BlockTitle>
         <List>
           <ListItem>
-            <a href="#">All</a>
+            <a href="#">Empty list item</a>
           </ListItem>
-          <ListItem>
-            <a href="#">Ready to wear</a>
-          </ListItem>
-          {/* <ListItem>
-            <a href="#">Swim & resort</a>
-          </ListItem> */}
-          {/* <ListItem>
-            <a href="#">New this week</a>
-          </ListItem> */}
-          {/* <ListItem>
-            <a href="#">New kids</a>
-          </ListItem> */}
         </List>
       </SmallBlock>
       <SmallBlock>
-        <BlockTitle>Edits</BlockTitle>
+        <BlockTitle>Empty title</BlockTitle>
         <List>
-          {/* <ListItem>
-            <a href="#">Luminosity</a>
-          </ListItem> */}
-          {/* <ListItem>
-            <a href="#">Form & light</a>
-          </ListItem> */}
-          {/* <ListItem>
-            <a href="#">Best dressed</a>
-          </ListItem> */}
-          {/* <ListItem>
-            <a href="#">Fall frames</a>
-          </ListItem> */}
-          {/* <ListItem>
-            <a href="#">In Denim</a>
-          </ListItem> */}
-          {/* <ListItem>
-            <a href="#">Chase the sun</a>
-          </ListItem> */}
-          {/* <ListItem>
-            <a href="#">Seaside escape</a>
-          </ListItem> */}
           <ListItem>
-            <a href="#">Empty</a>
+            <a href="#">Empty list item</a>
           </ListItem>
         </List>
       </SmallBlock>

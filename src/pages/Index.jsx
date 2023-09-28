@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 
-import MainImg from "../components/MainImg";
+import MainImg from "../components/common/MainImg";
 import IndexSwiper from "../components/Swiper/IndexSwiper";
-import FullScreenVideo from "../components/FullScreenVideo";
-import ImagesBanner from "../components/ImagesBanner";
+import FullScreenVideo from "../components/sections/FullScreenVideo";
+import ImagesBanner from "../components/Sections/ImagesBanner";
 
 function Index() {
   const Main = styled.div`
