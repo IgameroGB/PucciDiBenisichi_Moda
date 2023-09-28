@@ -1,0 +1,68 @@
+/*** Tailwind - No using ***/
+
+/*** Normalize.css ***/
+@import "normalize.css";
+
+/*** Font family ***/
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap");
+
+/*** GENERIC CSS ***/
+/* Variables */
+:root {
+  --white-color: #fff;
+  --dark-font: #303030;
+  --light-font: #979797;
+  --main-font-lato: "Lato", sans-serif;
+  --main-font-raleway: "Raleway", sans-serif;
+
+  --light-background: #f1f1f1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--main-font-raleway);
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+/*** SWIPER ***/
+
+/* Botones prev next */
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: var(--dark-font);
+}
+
+.swiper-button-prev:after {
+  margin-right: 10px;
+}
+
+.swiper-button-next:after {
+  margin-left: 10px;
+}
+
+/** Iframe **/
+/* Full screen */
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Proporción 16:9 para un iframe */
+  overflow: hidden;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0; /* Elimina cualquier borde del iframe si es necesario */
+}
